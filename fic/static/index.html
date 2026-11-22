@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formivane Intelligence Centre</title>
+<style>
+:root{
+  --bg:#0b0d12;--panel:#12151d;--panel2:#171b25;--line:#232837;--text:#e6e9f0;--muted:#8b93a7;--dim:#5d6578;
+  --accent:#7c9cff;--accent2:#5eead4;--good:#4ade80;--warn:#fbbf24;--bad:#f87171;--info:#60a5fa;
+  --r:10px;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 var(--font);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.app{display:grid;grid-template-columns:232px 1fr;min-height:100vh}
+aside{background:var(--panel);border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:0;height:100vh}
+.brand{display:flex;gap:10px;align-items:center;padding:0 8px 22px}
+.logo{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#0b0d12;font-size:13px}
+.brand b{font-size:12.5px;letter-spacing:.08em;line-height:1.25}
+.brand small{display:block;color:var(--muted);font-weight:500;letter-spacing:.02em}
+nav a{display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:8px;color:var(--muted);font-weight:500;margin-bottom:2px}
+nav a:hover{background:var(--panel2);color:var(--text);text-decoration:none}
+nav a.on{background:var(--panel2);color:var(--text);box-shadow:inset 2px 0 0 var(--accent)}
+nav .badge{margin-left:auto}
+main{padding:28px 32px 60px;min-width:0}
+h1{font-size:22px;margin:0 0 4px;font-weight:650;letter-spacing:-.01em}
+h2{font-size:13px;margin:0 0 12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.07em}
+.sub{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;gap:14px}
+.k4{grid-template-columns:repeat(4,minmax(0,1fr))}.k2{grid-template-columns:repeat(2,minmax(0,1fr))}.k3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;min-width:0;overflow-x:auto}
+.kpi .v{font-size:26px;font-weight:650;letter-spacing:-.02em;margin-top:2px}
+.kpi .l{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.kpi .h{color:var(--dim);font-size:12px}
+table{width:100%;border-collapse:collapse}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);text-align:left;font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr.click{cursor:pointer}tr.click:hover td{background:var(--panel2)}
+.tbl{overflow-x:auto}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11.5px;font-weight:600;white-space:nowrap;border:1px solid transparent}
+.b-strong{background:#4ade8022;color:var(--good)}.b-possible{background:#60a5fa22;color:var(--info)}
+.b-investigate{background:#fbbf2422;color:var(--warn)}.b-unlikely{background:#8b93a71f;color:var(--muted)}.b-ineligible{background:#f8717122;color:var(--bad)}
+.b-ok{background:#4ade8022;color:var(--good)}.b-err{background:#f8717122;color:var(--bad)}.b-neutral{background:#7c9cff22;color:var(--accent)}
+.muted{color:var(--muted)}.dim{color:var(--dim)}.small{font-size:12.5px}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+input,select,textarea{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 10px;font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:-1px}
+button{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:7px 12px;font:inherit;font-weight:550;cursor:pointer}
+button:hover{border-color:var(--accent)}button.pri{background:var(--accent);color:#0b0d12;border-color:var(--accent)}
+button.good{border-color:#4ade8066;color:var(--good)}button.bad{border-color:#f8717166;color:var(--bad)}
+.empty{color:var(--dim);padding:22px;text-align:center;border:1px dashed var(--line);border-radius:var(--r)}
+.list{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(760px,100%);background:var(--bg);border-left:1px solid var(--line);overflow-y:auto;padding:24px 26px;transform:translateX(100%);transition:transform .2s;z-index:20}
+.drawer.open{transform:none}
+.scrim{position:fixed;inset:0;background:#0008;display:none;z-index:10}.scrim.open{display:block}
+.bar{height:6px;background:var(--panel2);border-radius:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent)}
+.crit{display:grid;grid-template-columns:110px 1fr 60px;gap:10px;align-items:center;margin:6px 0}
+pre{white-space:pre-wrap;word-break:break-word;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:12px;margin:0;max-height:340px;overflow:auto;font-size:12px}
+.tag{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 4px 2px 0;font-size:12px;color:var(--muted)}
+.note{background:#7c9cff12;border:1px solid #7c9cff33;color:#c7d2fe;border-radius:8px;padding:10px 12px;font-size:12.5px;margin-bottom:16px}
+svg text{fill:var(--dim);font-size:10px}
+.tabs{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap}.tabs button.on{border-color:var(--accent);color:var(--accent)}
+.toast{position:fixed;bottom:20px;right:20px;background:var(--panel2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;z-index:30;display:none}
+@media (max-width:1100px){.k4{grid-template-columns:repeat(2,minmax(0,1fr))}.k3{grid-template-columns:1fr}}
+@media (max-width:760px){
+  .app{grid-template-columns:minmax(0,1fr)}
+  aside{min-width:0;position:sticky;height:auto;padding:10px 16px;z-index:5;border-right:0;border-bottom:1px solid var(--line)}
+  .brand{padding:0 0 8px}nav{display:flex;overflow-x:auto;gap:4px}nav a{white-space:nowrap;padding:7px 10px}
+  main{padding:18px 16px 50px}.sub{overflow-wrap:anywhere}.k2,.k4{grid-template-columns:1fr}.hide-m{display:none}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div class="brand"><div class="logo">FI</div><b>FORMIVANE<br>INTELLIGENCE CENTRE<small>Formivane Digital</small></b></div>
+    <nav id="nav">
+      <a href="#overview">Overview</a>
+      <a href="#opportunities">Opportunities</a>
+      <a href="#agents">Agent Centre</a>
+      <a href="#learning">Learning Centre <span class="badge b-investigate" id="nb-rules" hidden></span></a>
+      <a href="#proposals">Proposals <span class="badge b-neutral" id="nb-props" hidden></span></a>
+      <a href="#analytics">Analytics</a>
+    </nav>
+  </aside>
+  <main id="view"></main>
+</div>
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const gbp=v=>v==null?"—":"£"+Math.round(v).toLocaleString("en-GB");
+const date=v=>v?new Date(v).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}):"—";
+const ago=v=>{if(!v)return"—";const s=(Date.now()-new Date(v))/1e3;return s<3600?Math.round(s/60)+"m ago":s<86400?Math.round(s/3600)+"h ago":Math.round(s/86400)+"d ago"};
+const CLS={"Strong candidate":"strong","Possible candidate":"possible","Requires investigation":"investigate","Unlikely to be suitable":"unlikely","Ineligible":"ineligible"};
+const badge=c=>c?`<span class="badge b-${CLS[c]||"neutral"}">${esc(c)}</span>`:"<span class='dim'>—</span>";
+const api=async(p,o)=>{const r=await fetch(p,o);const j=await r.json();if(!r.ok)throw new Error(j.error||r.status);return j};
+const post=(p,b={})=>api(p,{method:"POST",headers:{"Content-Type":"application/json","X-FIC":"1"},body:JSON.stringify(b)});
+function toast(m){const t=$("#toast");t.textContent=m;t.style.display="block";clearTimeout(t._h);t._h=setTimeout(()=>t.style.display="none",3500)}
+function kpi(l,v,h=""){return`<div class="card kpi"><div class="l">${l}</div><div class="v">${v}</div><div class="h">${h}</div></div>`}
+function empty(m){return`<div class="empty">${m}</div>`}
+
+/* tiny SVG charts */
+function bars(data,{key="n",label="d",h=140,color="var(--accent)"}={}){
+  if(!data.length)return empty("No data yet");
+  const max=Math.max(...data.map(d=>d[key]||0),1),w=100/data.length;
+  return`<svg viewBox="0 0 100 ${h}" preserveAspectRatio="none" style="width:100%;height:${h}px" role="img">${data.map((d,i)=>{
+    const bh=(d[key]||0)/max*(h-18);return`<rect x="${i*w+w*.15}" y="${h-14-bh}" width="${w*.7}" height="${bh}" rx="1" fill="${color}"><title>${esc(d[label])}: ${d[key]}</title></rect>`}).join("")}
+  </svg><div class="row small dim"><span>${esc(data[0][label])}</span><span>${esc(data[data.length-1][label])}</span></div>`}
+function hbars(data,key,label){
+  if(!data.length)return empty("No data yet");const max=Math.max(...data.map(d=>d[key]||0),1);
+  return data.map(d=>`<div class="crit"><span class="small">${esc(d[label]??"—")}</span><div class="bar"><i style="width:${(d[key]||0)/max*100}%"></i></div><span class="small muted">${d[key]}</span></div>`).join("")}
+
+const views={
+async overview(){
+  const d=await api("/api/overview");const c=d.counts,b=d.budget;
+  setBadges(d);
+  return`<h1>Overview</h1><p class="sub">Live state of discovery, qualification and agent work. All figures come from the local database.</p>
+  <div class="grid k4">${kpi("New (24h)",c.new_24h||0,(c.total||0)+" tracked in total")}${kpi("Qualified",c.qualified||0,"strong / possible / investigate")}
+  ${kpi("Advertised value",gbp(c.potential_value),"strong+possible, not revenue")}${kpi("AI budget today",`${b.used.business+b.used.audit+b.used.reserve}/${b.caps.business+b.caps.audit+b.caps.reserve}`,`business ${b.used.business}/${b.caps.business} · audit ${b.used.audit}/${b.caps.audit}`)}</div>
+  <div class="grid k2" style="margin-top:14px">
+   <div class="card"><h2>Upcoming deadlines</h2>${d.deadlines.length?`<table>${d.deadlines.map(o=>`<tr class="click" onclick="openOpp(${o.id})"><td>${esc(o.title)}<div class="small dim">${esc(o.buyer)}</div></td><td class="small">${date(o.deadline)}</td><td>${badge(o.cls)}</td></tr>`).join("")}</table>`:empty("No qualified opportunities with open deadlines")}</div>
+   <div class="card"><h2>Active tasks</h2>${d.active_tasks.length?`<table>${d.active_tasks.map(t=>`<tr><td class="mono">#${t.id}</td><td>${esc(t.kind)}</td><td class="small muted">${esc(t.agent)}</td><td><span class="badge ${t.status=="in_progress"?"b-investigate":"b-neutral"}">${esc(t.status)}</span></td></tr>`).join("")}</table>`:empty("Queue empty")}
+   <h2 style="margin-top:18px">Collection runs</h2>${d.runs.length?`<table>${d.runs.map(r=>`<tr><td>${esc(r.source)}/${esc(r.stage)}</td><td><span class="badge ${r.status=="ok"?"b-ok":"b-err"}">${esc(r.status)}</span></td><td class="small muted">${r.fetched} fetched · ${r.new} new · ${r.duplicates} dup</td><td class="small dim">${ago(r.finished)}</td></tr>`).join("")}</table>`:empty("No collection runs yet. Run: python -m fic collect")}</div>
+  </div>
+  <div class="card" style="margin-top:14px"><h2>Recent agent activity</h2>${d.activity.length?`<table>${d.activity.map(a=>`<tr><td class="small dim" style="width:90px">${ago(a.created)}</td><td style="width:180px">${esc(a.actor)}</td><td>${esc(a.action)} <span class="small dim mono">${esc(String(a.detail??"").slice(0,140))}</span></td></tr>`).join("")}</table>`:empty("No activity yet")}</div>`},
+
+async opportunities(){
+  const p=new URLSearchParams(location.hash.split("?")[1]||"");
+  const rows=await api("/api/opportunities?"+p.toString());
+  return`<h1>Opportunities</h1><p class="sub">Official notices from Find a Tender and Contracts Finder. Click a row to inspect evidence.</p>
+  <div class="toolbar"><input id="q" placeholder="Search title or buyer" value="${esc(p.get("q")||"")}" style="flex:1;min-width:180px">
+  <select id="cls"><option value="">All classifications</option>${Object.keys(CLS).map(c=>`<option ${p.get("cls")==c?"selected":""}>${c}</option>`).join("")}</select>
+  <select id="scope"><option value="active">Active pipeline</option><option value="all" ${p.get("scope")=="all"?"selected":""}>Everything (incl. filtered/expired)</option></select>
+  <button class="pri" onclick="filterOpps()">Apply</button></div>
+  <div class="card tbl">${rows.length?`<table><thead><tr><th>Score</th><th>Opportunity</th><th class="hide-m">Advertised</th><th class="hide-m">Deadline</th><th>Class</th><th class="hide-m">Eligibility</th></tr></thead><tbody>
+  ${rows.map(o=>`<tr class="click" onclick="openOpp(${o.id})"><td><b>${o.score??"—"}</b></td><td>${esc(o.title)}<div class="small dim">${esc(o.buyer)} · ${esc(o.source)} · ${esc((o.category||"").replace(/_/g," "))}</div></td><td class="hide-m">${gbp(o.value_amount)}</td><td class="hide-m small">${date(o.deadline)}</td><td>${badge(o.cls)}</td><td class="hide-m small muted">${esc((o.eligibility_status||"").replace(/_/g," "))}</td></tr>`).join("")}</tbody></table>`:empty("Nothing matches. Try 'Everything' scope, or run a collection.")}</div>`},
+
+async agents(){
+  const a=await api("/api/agents");
+  return`<h1>Agent Centre</h1><p class="sub">Six specialists under one orchestrator. Agents only run when a task needs them.</p>
+  <div class="grid k3">${a.map(g=>`<div class="card"><div class="row"><b>${esc(g.name)}</b><span class="badge ${g.status=="working"?"b-investigate":g.status=="queued"?"b-neutral":"b-unlikely"}">${esc(g.status)}${g.queued?` · ${g.queued}`:""}</span></div>
+   <p class="small muted" style="margin:6px 0 12px">${esc(g.role)}</p>
+   <div class="row small"><span class="dim">Runs</span><span>${g.runs||0}</span></div>
+   <div class="row small"><span class="dim">QC pass rate</span><span>${g.runs?Math.round((g.ok||0)/g.runs*100)+"%":"—"}</span></div>
+   <div class="row small"><span class="dim">Est. tokens used</span><span>${(g.tok||0).toLocaleString()}</span></div>
+   <div class="row small"><span class="dim">Last run</span><span>${ago(g.last)}</span></div>
+   <h2 style="margin-top:14px">Recent mistakes</h2>${g.mistakes.length?g.mistakes.map(m=>`<div class="small" style="margin-bottom:6px"><span class="badge b-err">${esc(m.kind)}</span> <span class="muted">${esc(String(m.detail).slice(0,120))}</span></div>`).join(""):`<div class="small dim">None recorded</div>`}
+   <h2 style="margin-top:14px">Approved improvements</h2>${g.rules.length?g.rules.map(r=>`<span class="tag">${esc(r.rule_key)} v${r.version}</span>`).join(""):`<div class="small dim">None yet</div>`}</div>`).join("")}</div>`},
+
+async learning(){
+  const d=await api("/api/learning");const m=d.metrics;const tab=(location.hash.split("?tab=")[1]||"pending");
+  setBadges({pending_rules:d.rules.filter(r=>r.status=="pending_approval").length});
+  const groups={pending:r=>r.status=="pending_approval",candidate:r=>r.status=="candidate",active:r=>r.status=="active",rejected:r=>r.status=="rejected",history:r=>["retired","rolled_back"].includes(r.status)};
+  const list=d.rules.filter(groups[tab]||groups.pending);
+  const rc=m.rules_engine;
+  return`<h1>Learning Centre</h1><p class="sub">Every rule is proposed from evidence, tested against labelled history, and only goes live after validation and your approval.</p>
+  <div class="grid k4">${kpi("Labelled cases",m.labelled_cases,"your feedback + real outcomes")}${kpi("Rules-engine accuracy",rc?Math.round(rc.accuracy*100)+"%":"—",rc?`${rc.false_accept} false accept · ${rc.false_reject} false reject`:"needs feedback")}
+  ${kpi("AI analyst accuracy",m.ai_qualifier_accuracy!=null?Math.round(m.ai_qualifier_accuracy*100)+"%":"—",m.ai_labelled+" labelled AI decisions")}${kpi("Errors discovered",d.errors.length,"QC + feedback + audits")}</div>
+  <div class="tabs" style="margin-top:18px">${Object.keys(groups).map(k=>`<button class="${k==tab?"on":""}" onclick="location.hash='learning?tab=${k}'">${{pending:"Awaiting approval",candidate:"Candidates",active:"Approved",rejected:"Rejected",history:"Retired / rolled back"}[k]} (${d.rules.filter(groups[k]).length})</button>`).join("")}</div>
+  <div class="list">${list.length?list.map(ruleCard).join(""):empty("No rules in this state")}</div>
+  <div class="grid k2" style="margin-top:18px">
+   <div class="card"><h2>Errors discovered</h2>${d.errors.length?`<div class="tbl"><table>${d.errors.slice(0,25).map(e=>`<tr><td class="small dim">${ago(e.created)}</td><td class="small">${esc(e.agent)}</td><td><span class="badge b-err">${esc(e.kind)}</span><div class="small muted">${esc(String(e.detail).slice(0,160))}</div></td><td class="small dim">${esc(e.detected_by)}</td></tr>`).join("")}</table></div>`:empty("No errors recorded")}</div>
+   <div class="card"><h2>Rule version history</h2>${d.events.length?`<div class="tbl"><table>${d.events.slice(0,30).map(e=>`<tr><td class="small dim">${ago(e.created)}</td><td class="mono">${esc(e.rule_key)} v${e.version}</td><td><span class="badge b-neutral">${esc(e.event)}</span></td><td class="small muted">${esc(e.actor)}</td></tr>`).join("")}</table></div>`:empty("No rule events yet")}</div>
+  </div>`},
+
+async proposals(){
+  const p=await api("/api/proposals");setBadges({draft_proposals:p.filter(x=>x.status=="draft").length});
+  return`<h1>Proposals</h1><p class="sub">Drafts prepared by the Proposal Specialist. Nothing is ever submitted by the system. Approval only marks a draft ready for you to submit.</p>
+  ${p.length?`<div class="list">${p.map(x=>`<div class="card"><div class="row"><div><b>${esc(x.title||x.opp_title)}</b><div class="small dim">Opp #${x.opp_id} · deadline ${date(x.deadline)} · <a href="${esc(x.url)}" target="_blank" rel="noopener">official notice</a></div></div><span class="badge ${x.status=="draft"?"b-investigate":x.status=="approved"?"b-ok":"b-unlikely"}">${esc(x.status)}</span></div>
+   ${JSON.parse(x.missing_info||"[]").length?`<div class="note"><b>Missing information:</b> ${JSON.parse(x.missing_info).map(esc).join("; ")}</div>`:""}
+   ${JSON.parse(x.verify||"[]").length?`<div class="note"><b>Verify before submitting:</b> ${JSON.parse(x.verify).map(esc).join("; ")}</div>`:""}
+   <details><summary class="small muted" style="cursor:pointer">Read draft</summary><pre style="margin-top:10px">${esc(x.body_md)}</pre></details>
+   ${x.status=="draft"?`<div class="toolbar" style="margin:12px 0 0"><button class="good" onclick="propAct(${x.id},'approve')">Approve as ready</button><button class="bad" onclick="propAct(${x.id},'reject')">Reject</button></div>`:""}</div>`).join("")}</div>`:empty("No drafts yet. Request one from an opportunity (Opportunities → open → Request proposal), then run /fic-proposal in Claude Code.")}`},
+
+async analytics(){
+  const a=await api("/api/analytics");const o=a.outcomes;const L=a.learning;
+  return`<h1>Analytics</h1><p class="sub">Real data only. Empty panels mean no data has been recorded yet, not zero performance.</p>
+  <div class="grid k4">${kpi("Bids submitted",o.submitted,"recorded via fic outcome")}${kpi("Contracts won",o.won,o.submitted?Math.round(o.won/o.submitted*100)+"% conversion":"no submissions yet")}
+  ${kpi("Revenue received",gbp(o.revenue_received),"actual, recorded by you")}${kpi("Est. vs actual cost",o.est_cost||o.actual_cost?`${gbp(o.est_cost)} / ${gbp(o.actual_cost)}`:"—","delivery cost tracking")}</div>
+  <div class="grid k2" style="margin-top:14px">
+   <div class="card"><h2>Opportunities discovered per day</h2>${bars(a.discovered_by_day)}</div>
+   <div class="card"><h2>Relevant (passed filters) per day</h2>${bars(a.discovered_by_day,{key:"relevant",color:"var(--accent2)"})}</div>
+   <div class="card"><h2>Classification mix</h2>${hbars(a.classification_mix,"n","c")}</div>
+   <div class="card"><h2>Agent QC error rate</h2>${a.error_rate_by_agent.length?`<table>${a.error_rate_by_agent.map(e=>`<tr><td>${esc(e.agent)}</td><td class="small muted">${e.runs} runs</td><td>${Math.round(e.rate*100)}%</td></tr>`).join("")}</table>`:empty("No agent runs yet")}</div>
+   <div class="card"><h2>Qualification accuracy</h2>${L.labelled_cases?`<div class="row"><span>Rules engine</span><b>${L.rules_engine?Math.round(L.rules_engine.accuracy*100)+"%":"—"}</b></div><div class="row"><span>AI analyst</span><b>${L.ai_qualifier_accuracy!=null?Math.round(L.ai_qualifier_accuracy*100)+"%":"—"}</b></div><div class="small dim">over ${L.labelled_cases} labelled cases</div>`:empty("Label opportunities to measure accuracy")}</div>
+   <div class="card"><h2>Learning events over time</h2>${a.rules_over_time.length?hbars(a.rules_over_time.map(r=>({k:r.d+" "+r.event,n:r.n})),"n","k"):empty("No learning events yet")}</div>
+  </div>`},
+};
+
+function ruleCard(r){
+  const t=r.test_result||{};const b=t.before,a=t.after;
+  return`<div class="card"><div class="row"><div><span class="mono">#${r.id}</span> <b>${esc(r.rule_key)}</b> <span class="dim">v${r.version}</span>
+   <div class="small muted">${esc(r.kind)} · agent ${esc(r.agent)} · risk ${esc(r.risk)} · by ${esc(r.created_by)}</div></div>
+   <span class="badge ${r.status=="active"?"b-ok":r.status=="rejected"||r.status=="rolled_back"?"b-err":"b-investigate"}">${esc(r.status)}</span></div>
+   <p style="margin:10px 0">${esc(r.rationale)}</p>
+   <div class="small"><span class="dim">Spec:</span> <span class="mono">${esc(JSON.stringify(r.spec))}</span></div>
+   <div class="small"><span class="dim">Evidence:</span> <span class="mono">${esc(JSON.stringify(r.evidence))}</span></div>
+   ${t.testable?`<div class="grid k2" style="margin-top:12px"><div class="card" style="background:var(--panel2)"><h2>Before</h2>accuracy <b>${b.accuracy??"—"}</b> · false accept ${b.false_accept} · false reject ${b.false_reject}</div>
+   <div class="card" style="background:var(--panel2)"><h2>After</h2>accuracy <b>${a.accuracy??"—"}</b> · false accept ${a.false_accept} · false reject ${a.false_reject}</div></div>
+   <div class="small" style="margin-top:8px">${t.passed?'<span class="badge b-ok">passed</span>':'<span class="badge b-err">failed</span>'} ${esc(t.reason)} · ${t.cases} cases${t.low_evidence?' · <span class="badge b-investigate">low evidence</span>':""} · changed: ${esc((t.changed_cases||[]).join(", ")||"none")}</div>`:t.note?`<div class="small dim">${esc(t.note)}</div>`:""}
+   <div class="toolbar" style="margin:12px 0 0">${r.status=="pending_approval"?`<button class="good" onclick="ruleAct(${r.id},'approve')">Approve</button><button class="bad" onclick="ruleAct(${r.id},'reject')">Reject</button>`:""}
+   ${r.status=="active"?`<button class="bad" onclick="ruleAct(${r.id},'rollback')">Roll back</button>`:""}</div></div>`}
+
+async function openOpp(id){
+  const d=await api("/api/opportunity/"+id),c=d.card,s=d.score.score||{},e=d.economics||d.score.economics||{};
+  $("#drawer").innerHTML=`<div class="row"><div><div class="small dim">Opportunity #${id} · ${esc(d.notice_id)}</div><h1 style="margin-top:4px">${esc(c.title)}</h1><div class="muted">${esc(c.buyer)}</div></div><button onclick="closeDrawer()" aria-label="Close">✕</button></div>
+   <div class="toolbar" style="margin:14px 0">${badge(c.classification)}<span class="badge b-neutral">${esc(c.classified_by)}</span><span class="badge b-unlikely">${esc(d.status)}</span><a href="${esc(c.source)}" target="_blank" rel="noopener">Official notice ↗</a></div>
+   <div class="grid k3">${kpi("Score",`${c.score??"—"}<span class="dim" style="font-size:14px"> ±${c.uncertainty??"?"}</span>`,s.gate?"gate: "+esc(s.gate):"explainable estimate")}${kpi("Advertised value",gbp(c.contract_value),e.value_is_ceiling?"ceiling / framework value":"buyer budget, not revenue")}${kpi("Deadline",date(c.deadline),"")}</div>
+   <div class="card" style="margin-top:14px"><h2>Score breakdown</h2>${Object.entries(s.criteria||{}).map(([k,v])=>`<div class="crit"><span class="small">${k} <span class="dim">${Math.round(v.weight*100)}%</span></span><div><div class="bar"><i style="width:${v.value*100}%"></i></div><div class="small dim">${esc(v.why)} · confidence ${v.confidence}</div></div><span class="small">${Math.round(v.value*100)}</span></div>`).join("")}</div>
+   <div class="card" style="margin-top:14px"><h2>Economics (estimates)</h2><div class="grid k3"><div><div class="dim small">Effort</div>${esc((c.est_time_days||[]).join("–"))} days</div><div><div class="dim small">Est. cost</div>${(c.est_costs_gbp||[]).map(gbp).join(" – ")}</div><div><div class="dim small">Potential profit</div>${c.potential_profit_gbp?c.potential_profit_gbp.map(gbp).join(" – "):"unknown"}</div></div><div class="small dim" style="margin-top:8px">${esc(e.note||"")}</div></div>
+   <div class="card" style="margin-top:14px"><h2>Eligibility — ${esc((d.eligibility.status||"").replace(/_/g," "))}</h2>${(d.eligibility.requirements||[]).length?`<table>${d.eligibility.requirements.map(r=>`<tr><td>${esc(r.req)}${r.required?` <span class="dim small">(${esc(r.required)})</span>`:""}<div class="small dim">“…${esc(r.evidence)}…”</div></td><td><span class="badge ${r.met=="yes"?"b-ok":r.met=="no"?"b-err":"b-investigate"}">${r.met=="unknown"?"verify":esc(r.met)}</span></td><td class="small dim">${esc(r.source)}</td></tr>`).join("")}</table>`:`<div class="small muted">No requirements detected in the notice text. This is not confirmation of eligibility; read the tender documents.</div>`}</div>
+   <div class="card" style="margin-top:14px"><h2>Next action</h2>${esc(c.next_action)}<div class="toolbar" style="margin:12px 0 0"><button class="pri" onclick="reqProp(${id})">Request proposal draft</button></div></div>
+   <div class="card" style="margin-top:14px"><h2>Your verdict (teaches the system)</h2><div class="toolbar"><select id="fb-label">${d.classes.map(x=>`<option>${x}</option>`).join("")}</select><input id="fb-note" placeholder="Why? e.g. requires DSPT we don't hold" style="flex:1;min-width:160px"><button class="pri" onclick="sendFb(${id})">Save label</button></div>
+   ${d.feedback.map(f=>`<div class="small muted">${ago(f.created)} · ${esc(f.source)}: ${badge(f.label_classification)} ${esc(f.note)}</div>`).join("")}</div>
+   <div class="card" style="margin-top:14px"><h2>Agent outputs</h2>${d.runs.length?d.runs.map(r=>`<details style="margin-bottom:8px"><summary style="cursor:pointer">${esc(r.agent)} · ${esc(r.decision)} · ${r.qc_passed?'<span class="badge b-ok">QC pass</span>':'<span class="badge b-err">QC fail</span>'}</summary>${r.qc_issues.length?`<div class="note">${r.qc_issues.map(esc).join("<br>")}</div>`:""}<pre>${esc(JSON.stringify(r.output,null,1))}</pre></details>`).join(""):`<div class="small dim">No AI analysis yet (runs at the daily evaluation).</div>`}</div>
+   <div class="card" style="margin-top:14px"><h2>Buyer award history</h2>${d.buyer_awards.length?`<table>${d.buyer_awards.map(a=>`<tr><td>${esc(a.title)}<div class="small dim">${esc(a.supplier)}</div></td><td>${gbp(a.value)}</td><td class="small">${date(a.award_date)}</td></tr>`).join("")}</table>`:`<div class="small dim">No awards recorded for this buyer yet.</div>`}</div>
+   <div class="card" style="margin-top:14px"><h2>Source evidence</h2><div class="small dim" style="margin-bottom:6px">CPV ${esc(d.cpv)} · ${esc(d.method)} · SME suitable: ${d.sme_suitable==null?"not stated":d.sme_suitable?"yes":"no"} · matched: ${(d.relevance_terms||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div><pre>${esc(d.description)}</pre></div>`;
+  $("#drawer").classList.add("open");$("#scrim").classList.add("open");
+}
+function closeDrawer(){$("#drawer").classList.remove("open");$("#scrim").classList.remove("open")}
+async function sendFb(id){try{await post("/api/feedback",{opp_id:id,label:$("#fb-label").value,note:$("#fb-note").value});toast("Label saved — used in the next learning cycle");openOpp(id)}catch(e){toast(e.message)}}
+async function reqProp(id){try{const r=await post(`/api/opportunity/${id}/request-proposal`);toast(r.task_id?"Proposal task queued — run /fic-proposal in Claude Code":"Already queued")}catch(e){toast(e.message)}}
+async function ruleAct(id,a){if(!confirm(`${a} rule #${id}?`))return;try{await post(`/api/rules/${id}/${a}`,{});toast(`Rule #${id}: ${a} done`);render()}catch(e){toast(e.message)}}
+async function propAct(id,a){try{await post(`/api/proposals/${id}/${a}`);toast("Saved");render()}catch(e){toast(e.message)}}
+function filterOpps(){const p=new URLSearchParams();["q","cls","scope"].forEach(k=>{const v=$("#"+k).value;if(v)p.set(k,v)});location.hash="opportunities?"+p}
+function setBadges(d){if(d.pending_rules!=null){const b=$("#nb-rules");b.hidden=!d.pending_rules;b.textContent=d.pending_rules}if(d.draft_proposals!=null){const b=$("#nb-props");b.hidden=!d.draft_proposals;b.textContent=d.draft_proposals}}
+async function render(){
+  const name=(location.hash.slice(1).split("?")[0])||"overview";
+  document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+name));
+  try{$("#view").innerHTML=await (views[name]||views.overview)()}catch(e){$("#view").innerHTML=empty("Failed to load: "+esc(e.message))}
+  if(name==="opportunities"){const q=$("#q");q&&q.addEventListener("keydown",e=>{if(e.key==="Enter")filterOpps()})}
+}
+window.addEventListener("hashchange",render);document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDrawer()});
+render();
+</script>
+</body>
+</html>

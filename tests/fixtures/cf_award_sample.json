@@ -1,0 +1,406 @@
+{
+ "uri": "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?limit=3&stages=award&publishedFrom=2026-11-01T00:00:00Z&publishedTo=2026-11-22T00:54:42Z",
+ "version": "1.1",
+ "extensions": [
+  "https://standard.open-contracting.org/profiles/eu/master/en/extension.json",
+  "https://raw.githubusercontent.com/portaledcahn/ocds_tenderDatePublished_extension/master/extension.json",
+  "https://raw.githubusercontent.com/open-contracting-extensions/ocds_budget_breakdown_extension/master/extension.json",
+  "https://raw.githubusercontent.com/Crown-Commercial-Service/ocds_awards_datePublished_extension/main/extension.json",
+  "https://raw.githubusercontent.com/Crown-Commercial-Service/ocds_partyDetails_vcse_extension/main/extension.json",
+  "https://raw.githubusercontent.com/Crown-Commercial-Service/ocds_tender_suitability_extension/main/extension.json",
+  "https://raw.githubusercontent.com/open-contracting-extensions/ocds_pagination_extension/master/extension.json"
+ ],
+ "publishedDate": "2026-11-20T20:21:31Z",
+ "publisher": {
+  "name": "Cabinet Office",
+  "scheme": "GB-GOR",
+  "uid": "D2",
+  "uri": "https://www.gov.uk/government/organisations/cabinet-office"
+ },
+ "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+ "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
+ "releases": [
+  {
+   "ocid": "ocds-b5fd17-48db6cd2-cabf-4498-8255-a1635c8180e6",
+   "id": "d991582b-b97f-48c9-a726-a12bba6aa933-922252",
+   "language": "en",
+   "date": "2026-11-20T20:21:31Z",
+   "tag": [
+    "award"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "C1677",
+    "title": "Provision of Laptops",
+    "description": "To provide up to a maximum of 200 Laptops.\r\n\r\nUnder the Health Trust Europe Framework - ICT Solutions 3.",
+    "status": "complete",
+    "classification": {
+     "scheme": "CPV",
+     "id": "30213100",
+     "description": "Portable computers"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 241000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "selective",
+    "procurementMethodDetails": "Call-off from a framework agreement",
+    "tenderPeriod": {
+     "endDate": "2026-10-12T17:00:00+01:00"
+    },
+    "contractPeriod": {
+     "startDate": "2026-10-21T00:00:00+01:00",
+     "endDate": "2027-10-20T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": false,
+     "vcse": false
+    },
+    "mainProcurementCategory": "goods"
+   },
+   "parties": [
+    {
+     "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/FxGd77hQ",
+     "name": "Nursing And Midwifery Council",
+     "identifier": {
+      "legalName": "Nursing And Midwifery Council",
+      "scheme": "GB-SRS",
+      "id": "sid4gov.cabinetoffice.gov.uk/FxGd77hQ"
+     },
+     "address": {
+      "streetAddress": "23 Portland Place",
+      "locality": "LONDON",
+      "postalCode": "W1B1PZ",
+      "countryName": "England"
+     },
+     "roles": [
+      "buyer"
+     ]
+    },
+    {
+     "id": "GB-COH-02465350",
+     "name": "CDW UK",
+     "identifier": {
+      "legalName": "CDW UK",
+      "scheme": "GB-COH",
+      "id": "02465350"
+     },
+     "address": {
+      "streetAddress": "1 New Change\r\nLondon\r\nEC4M 9AF"
+     },
+     "details": {
+      "scale": "large",
+      "vcse": false
+     },
+     "roles": [
+      "supplier"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/FxGd77hQ",
+    "name": "Nursing And Midwifery Council"
+   },
+   "awards": [
+    {
+     "id": "ocds-b5fd17-48db6cd2-cabf-4498-8255-a1635c8180e6-1",
+     "status": "active",
+     "date": "2026-10-19T00:00:00+01:00",
+     "datePublished": "2026-11-20T20:21:31Z",
+     "value": {
+      "amount": 241000,
+      "currency": "GBP"
+     },
+     "suppliers": [
+      {
+       "id": "GB-COH-02465350",
+       "name": "CDW UK"
+      }
+     ],
+     "contractPeriod": {
+      "startDate": "2026-10-21T00:00:00+01:00",
+      "endDate": "2027-10-20T23:59:59+01:00"
+     },
+     "documents": [
+      {
+       "id": "1",
+       "documentType": "awardNotice",
+       "description": "Awarded contract notice on Contracts Finder",
+       "url": "https://www.contractsfinder.service.gov.uk/Notice/d991582b-b97f-48c9-a726-a12bba6aa933",
+       "datePublished": "2026-11-20T20:21:31Z",
+       "format": "text/html",
+       "language": "en"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ocid": "ocds-b5fd17-3c8a7dd7-da67-4eed-9902-c536132b11e0",
+   "id": "1e57f29a-b739-4b60-bbff-bb7f58f756e1-922251",
+   "language": "en",
+   "date": "2026-11-20T17:28:15Z",
+   "tag": [
+    "award"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "CF-0692800D8d000003VQwdEAG",
+    "title": "Central - AOMR Lot 1 Incident Response Direct Award- 2026-27 - WMD - Land &Water",
+    "description": "Central - AOMR Lot 1 Incident Response Direct Award- 2026-27 - WMD - Land &Water",
+    "status": "complete",
+    "classification": {
+     "scheme": "CPV",
+     "id": "45246410",
+     "description": "Flood-defences maintenance works"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "SW1P 4DF"
+       },
+       {
+        "region": "West Midlands",
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 50000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "selective",
+    "procurementMethodDetails": "Call-off from a framework agreement",
+    "tenderPeriod": {
+     "endDate": "2026-10-05T12:00:00+01:00"
+    },
+    "contractPeriod": {
+     "startDate": "2026-10-06T00:00:00+01:00",
+     "endDate": "2026-10-07T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": false,
+     "vcse": false
+    }
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-308505",
+     "name": "DEFRA",
+     "identifier": {
+      "legalName": "DEFRA"
+     },
+     "address": {
+      "streetAddress": "Seacole Building, 2 Marsham Street",
+      "locality": "London",
+      "postalCode": "SW1P 4DF",
+      "countryName": "United Kingdom"
+     },
+     "roles": [
+      "buyer"
+     ]
+    },
+    {
+     "id": "GB-CFS-258936",
+     "name": "Land & Water",
+     "identifier": {
+      "legalName": "Land & Water"
+     },
+     "address": {
+      "streetAddress": "Weston Yard, Albury, Guildford, Surrey GU5 9AF"
+     },
+     "details": {
+      "scale": "sme"
+     },
+     "roles": [
+      "supplier"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-308505",
+    "name": "DEFRA"
+   },
+   "awards": [
+    {
+     "id": "ocds-b5fd17-3c8a7dd7-da67-4eed-9902-c536132b11e0-1",
+     "status": "active",
+     "date": "2026-10-15T00:00:00+01:00",
+     "datePublished": "2026-11-20T17:28:15Z",
+     "value": {
+      "amount": 50000,
+      "currency": "GBP"
+     },
+     "suppliers": [
+      {
+       "id": "GB-CFS-258936",
+       "name": "Land & Water"
+      }
+     ],
+     "contractPeriod": {
+      "startDate": "2026-10-06T00:00:00+01:00",
+      "endDate": "2026-10-07T23:59:59+01:00"
+     },
+     "documents": [
+      {
+       "id": "1",
+       "documentType": "awardNotice",
+       "description": "Awarded contract notice on Contracts Finder",
+       "url": "https://www.contractsfinder.service.gov.uk/Notice/1e57f29a-b739-4b60-bbff-bb7f58f756e1",
+       "datePublished": "2026-11-20T17:28:15Z",
+       "format": "text/html",
+       "language": "en"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "ocid": "ocds-b5fd17-3f786522-43f0-40dc-a74e-7372a6a7ea24",
+   "id": "31816022-80df-4493-8da0-24f243cd076e-922250",
+   "language": "en",
+   "date": "2026-11-20T17:23:52Z",
+   "tag": [
+    "award"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "IT-368-21371-QSB466 - AWARD",
+    "title": "2026-11-20 09:00 - QSB466 IP2 area of Ipswich to Pushforward Secondary (various locations in Ipswich, Stowmarket & Bury St Edmunds) - AWARD",
+    "description": "Suffolk County Council is seeking a mini competition against the following Dynamic Purchasing System: `The supply of Passenger Transport Services`, OJEU Notice Id: 2018/S 031-067685.\r\n      \r\n      IP2 area of Ipswich to Pushforward Secondary (various locations in Ipswich, Stowmarket & Bury St Edmunds).\r\n      \r\n      Further details can be found in the 'Tenders / My Tenders' area of this website, by selecting the 'View Details' button for this project.\r\n      \r\n      The deadline for returned submissions is 09:00 Friday 20th November 2026. Please note late returns will NOT be permitted.\r\n      \r\n      The deadline for clarification questions is 15:00 Thursday 19th November 2026 which must be generated via the correspondence option on the website.",
+    "status": "complete",
+    "classification": {
+     "scheme": "CPV",
+     "id": "60000000",
+     "description": "Transport services (excl. Waste transport)"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "IP1 2BX"
+       },
+       {
+        "countryName": "British Oversea Territories"
+       },
+       {
+        "countryName": "Channel Islands"
+       },
+       {
+        "countryName": "Europe"
+       },
+       {
+        "countryName": "Isle of Man"
+       },
+       {
+        "countryName": "Rest of the World"
+       },
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "procurementMethodDetails": "Not specified",
+    "tenderPeriod": {
+     "endDate": "2026-11-20T09:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2026-11-23T00:00:00Z",
+     "endDate": "2027-07-31T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": false,
+     "vcse": false
+    },
+    "mainProcurementCategory": "services"
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-154927",
+     "name": "Suffolk County Council Passenger Transport",
+     "identifier": {
+      "legalName": "Suffolk County Council Passenger Transport"
+     },
+     "address": {
+      "streetAddress": "Russell Road, Ipswich",
+      "locality": "Suffolk",
+      "postalCode": "IP1 2BX",
+      "countryName": "United Kingdom"
+     },
+     "details": {
+      "url": "https://www.suffolk.gov.uk/business/tenders-and-supplying-us"
+     },
+     "roles": [
+      "buyer"
+     ]
+    },
+    {
+     "id": "GB-CFS-337138",
+     "name": "Juber Nayeem T/A Jubz private hire Ltd",
+     "identifier": {
+      "legalName": "Juber Nayeem T/A Jubz private hire Ltd"
+     },
+     "address": {
+      "streetAddress": "47 Brookfield road , Ipswich , United Kingdom, Ip14en"
+     },
+     "roles": [
+      "supplier"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-154927",
+    "name": "Suffolk County Council Passenger Transport"
+   },
+   "awards": [
+    {
+     "id": "ocds-b5fd17-3f786522-43f0-40dc-a74e-7372a6a7ea24-1",
+     "status": "active",
+     "date": "2026-11-20T00:00:00Z",
+     "datePublished": "2026-11-20T17:23:52Z",
+     "value": {
+      "amount": 15245.6,
+      "currency": "GBP"
+     },
+     "suppliers": [
+      {
+       "id": "GB-CFS-337138",
+       "name": "Juber Nayeem T/A Jubz private hire Ltd"
+      }
+     ],
+     "contractPeriod": {
+      "startDate": "2026-11-23T00:00:00Z",
+      "endDate": "2027-07-31T23:59:59+01:00"
+     },
+     "documents": [
+      {
+       "id": "1",
+       "documentType": "awardNotice",
+       "description": "Awarded contract notice on Contracts Finder",
+       "url": "https://www.contractsfinder.service.gov.uk/Notice/31816022-80df-4493-8da0-24f243cd076e",
+       "datePublished": "2026-11-20T17:23:52Z",
+       "format": "text/html",
+       "language": "en"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "links": {}
+}

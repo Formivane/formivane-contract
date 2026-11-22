@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m fic:*)",
+      "Bash(python3 -m fic:*)",
+      "Read(./reports/**)",
+      "Read(./knowledge/**)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Bash(curl:*)",
+      "Bash(rm:*)",
+      "Bash(git push:*)",
+      "Bash(sqlite3:*)"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+# Formivane Intelligence Centre schedule (Linux cronie/vixie with CRON_TZ support).
+# Install:  crontab -e   then paste, replacing /path/to/formivane-contract.
+# The machine must be on and logged in to Claude Code (`claude` once, interactively) for the AI jobs.
+CRON_TZ=Europe/London
+# Every 4 hours, deterministic collection (no Claude)
+0 */4 * * *   /path/to/formivane-contract/scheduler/collect.sh
+# Daily 09:07 AI evaluation
+7 9 * * *     /path/to/formivane-contract/scheduler/daily.sh
+# Sunday 18:07 learning cycle
+7 18 * * 0    /path/to/formivane-contract/scheduler/weekly.sh

@@ -1,0 +1,82 @@
+# Formivane Intelligence Centre - main configuration.
+# Everything here is a planning target, editable without code changes.
+
+timezone = "Europe/London"
+db_path = "data/fic.db"
+
+[collection]
+# Only verified official OCDS APIs. See docs in README "Data sources".
+sources = ["fts", "cf"]
+page_limit = 100            # max allowed by both APIs
+max_pages_per_run = 20      # hard stop per source per run
+request_delay_seconds = 1.5 # polite rate limit between requests
+initial_lookback_days = 7   # first run only; later runs use the stored watermark
+timeout_seconds = 45
+user_agent = "FIC-procurement-monitor/1.0"
+collect_awards = true
+
+[relevance]
+min_score = 3.0             # below this an opportunity is stored but not queued
+# CPV prefixes that indicate digital work (prefix match).
+cpv_include = ["72", "48", "79342200", "79822500", "79800000", "73220000", "79310000"]
+title_weight = 2.0
+include_terms = [
+  "website", "web site", "web design", "web development", "web portal", "wordpress",
+  "drupal", "cms", "content management", "digital service", "digital transformation",
+  "automation", "workflow", "rpa", "robotic process", "crm", "customer relationship",
+  "dynamics 365", "salesforce", "hubspot", "power apps", "power automate", "software development",
+  "application development", "app development", "web application", "api integration", "system integration",
+  "dashboard", "management information", "data analysis", "data processing", "power bi", "chatbot",
+  "artificial intelligence", "ai", "machine learning", "booking system", "appointment booking",
+  "online form", "e-commerce", "ecommerce", "user research", "ux design", "accessibility audit",
+  "discovery phase", "alpha phase", "beta phase", "digital marketing", "seo", "web hosting", "software support",
+]
+exclude_terms = [
+  "construction", "refurbishment", "grounds maintenance", "cleaning", "catering", "vehicle",
+  "fleet", "roofing", "asbestos", "scaffolding", "electrical installation", "plumbing",
+  "medical equipment", "pharmaceutical", "dental", "clinical", "aggregates", "cement",
+  "waste collection", "security guard", "furniture", "uniform", "fuel", "taxi", "transport services",
+  "laboratory equipment", "refrigerator", "supply of laptops", "hardware supply", "printing",
+  "wifi", "wi-fi", "cctv", "cabling", "fire alarm", "supply and delivery", "installation works",
+]
+
+[scoring]
+# Weights must sum to 1.0; normalised automatically if they don't.
+weights = { profitability = 0.25, feasibility = 0.25, eligibility = 0.20, competition = 0.15, time = 0.10, strategic = 0.05 }
+strong_threshold = 65
+possible_threshold = 45
+investigate_threshold = 50   # score at/above which 'requires verification' becomes 'Requires investigation'
+min_days_to_deadline = 5     # fewer days than this -> heavily penalised
+sweet_spot_min = 5000        # GBP advertised value sweet spot for a small agency
+sweet_spot_max = 150000
+max_realistic_value = 500000 # above this, a small agency is unlikely to win as prime
+ceiling_value_flag = 1000000 # treat as framework/ceiling, not guaranteed spend
+
+[economics]
+internal_day_cost = 250      # GBP, your own cost per delivery day (time + tools)
+market_day_rate = [450, 700] # GBP the buyer's budget is assumed to be priced at -> expected effort = value / rate
+bid_cost_days = [1, 4]       # days spent writing a bid (low, high)
+
+[budget]
+# Counts of Claude subagent tasks per day. A Pro plan has no fixed token
+# allowance, so we budget tasks, not tokens. Adjust after a week of use.
+daily_ai_tasks = 30
+business_pct = 70
+audit_pct = 20
+reserve_pct = 10
+max_task_depth = 2           # follow-up tasks may spawn at most 2 levels deep
+stale_task_minutes = 120     # in_progress tasks older than this get requeued
+max_attempts = 3
+
+[orchestrator]
+daily_shortlist_size = 8     # opportunities sent for AI qualification per day
+buyer_research_min_score = 55
+buyer_research_cooldown_days = 30
+packet_description_chars = 1500
+packet_requirements_chars = 900
+
+[learning]
+min_labelled_cases = 5        # fewer than this -> result marked low-evidence, always human approval
+max_false_rejection_increase = 0
+auto_approve_low_risk = true  # only 'observation' rules are low risk
+weekly_audit_batch = 20

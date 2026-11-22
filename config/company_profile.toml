@@ -1,0 +1,39 @@
+# Formivane Digital - eligibility profile.
+# FILL THIS IN. The eligibility engine compares tender requirements against it.
+# Rules:
+#   true   = you hold it and can evidence it
+#   false  = you definitely do not hold it  (-> opportunity becomes Ineligible)
+#   omitted / "unknown" = not declared      (-> 'requires verification', never 'eligible')
+# Nothing here is ever reported as "confirmed"; it is your declaration.
+
+company_name = "Formivane Digital"
+country = "UK"
+sme = true
+
+[accreditations]
+# cyber_essentials = false
+# cyber_essentials_plus = false
+# iso_27001 = false
+# iso_9001 = false
+# dspt = false               # NHS Data Security and Protection Toolkit
+
+[frameworks]
+# g_cloud = false
+# digital_outcomes = false
+# ccs_other = false
+
+[security]
+# sc_clearance_staff = false
+# bpss_staff = false
+
+[finance]
+# annual_turnover_gbp = 0
+# professional_indemnity_gbp = 0
+# public_liability_gbp = 0
+# employers_liability_gbp = 0
+# years_trading = 0
+
+[delivery]
+# references_available = 0     # number of verifiable client references
+# can_work_onsite = true
+day_rate_gbp = 400

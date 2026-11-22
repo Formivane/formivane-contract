@@ -1,0 +1,1326 @@
+{
+ "uri": "https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?limit=100&stages=tender&publishedFrom=2026-11-10T00:00:00Z&publishedTo=2026-11-22T00:57:26Z",
+ "version": "1.1",
+ "extensions": [
+  "https://standard.open-contracting.org/profiles/eu/master/en/extension.json",
+  "https://raw.githubusercontent.com/portaledcahn/ocds_tenderDatePublished_extension/master/extension.json",
+  "https://raw.githubusercontent.com/open-contracting-extensions/ocds_budget_breakdown_extension/master/extension.json",
+  "https://raw.githubusercontent.com/Crown-Commercial-Service/ocds_awards_datePublished_extension/main/extension.json",
+  "https://raw.githubusercontent.com/Crown-Commercial-Service/ocds_partyDetails_vcse_extension/main/extension.json",
+  "https://raw.githubusercontent.com/Crown-Commercial-Service/ocds_tender_suitability_extension/main/extension.json",
+  "https://raw.githubusercontent.com/open-contracting-extensions/ocds_pagination_extension/master/extension.json"
+ ],
+ "publishedDate": "2026-11-20T15:45:17Z",
+ "publisher": {
+  "name": "Cabinet Office",
+  "scheme": "GB-GOR",
+  "uid": "D2",
+  "uri": "https://www.gov.uk/government/organisations/cabinet-office"
+ },
+ "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+ "publicationPolicy": "https://www.gov.uk/government/publications/open-contracting",
+ "releases": [
+  {
+   "ocid": "ocds-b5fd17-97c50046-db56-410c-85fb-faa5207bf904",
+   "id": "3f0945d1-6cf6-4244-ad3b-da605b45809d-922226",
+   "language": "en",
+   "date": "2026-11-20T15:45:17Z",
+   "tag": [
+    "tender"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "RA361520",
+    "title": "RA361520 - Working with Conflict Session",
+    "description": "Hi NELFT & North London NHS Foundation Trust Procurement Shared Service requests offers for the provision of the above goods based on a fixed 12 month offer.\r\n \r\nPlease clearly state your offered product's unit of measure and ensure you accompany your offer with a per item price.\r\nOffers for alternative products should be clearly stated, and any relevant specifications and information should accompany those variant offers.\r\nNo carriage charges should be included or subsequently billed.\r\nThe Trust does not bind itself to accept any offer, either in whole or in part. Your offer must be issued in accordance with the appropriate NHS Conditions of Contract, a copy of which is available on the Department of Health Website at: http://www.dh.gov.uk/en/publicationsandstatistics/publications/publicationspolicyandguidance/dh_121260\r\nThe Trust is currently operating under a policy of Socially Responsible Procurement (SRP) in relation to Corporate Social Responsibility (CSR) and it is expected any supplier who engages with the Trust should also have a demonstrable CSR Policy which outlines their commitment to being ethical and sustainable.\r\n \r\nPlease quote only if you accept Purchase Orders.  - To access this competition: login to https://suppliers.multiquote.com and view the opportunity RA361520. Not registered on MultiQuote - visit https://suppliers.multiquote.com then register and quote RA361520 as the reason for registration. Any queries please contact MultiQuote on 0151 482 9230.",
+    "datePublished": "2026-11-20T15:45:17Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "80000000",
+     "description": "Education and training services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "IG3 8XJ"
+       },
+       {
+        "countryName": "British Oversea Territories"
+       },
+       {
+        "countryName": "Channel Islands"
+       },
+       {
+        "countryName": "Europe"
+       },
+       {
+        "countryName": "Isle of Man"
+       },
+       {
+        "countryName": "Rest of the World"
+       },
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure",
+    "tenderPeriod": {
+     "endDate": "2026-12-04T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-01-04T00:00:00Z",
+     "endDate": "2028-01-03T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": false
+    },
+    "mainProcurementCategory": "goods",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/3f0945d1-6cf6-4244-ad3b-da605b45809d",
+      "datePublished": "2026-11-20T15:45:17Z",
+      "format": "text/html",
+      "language": "en"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-56941",
+     "name": "North East London NHS Foundation Trust",
+     "identifier": {
+      "legalName": "North East London NHS Foundation Trust"
+     },
+     "address": {
+      "streetAddress": "Trust Head Office, Goodmayes Hospital",
+      "locality": "Ilford",
+      "postalCode": "IG3 8XJ",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://suppliers.multiquote.com"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-56941",
+    "name": "North East London NHS Foundation Trust"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-511318c7-4f9e-4fe5-93e8-e174ebfee1fb",
+   "id": "5ec94fa9-00b0-4308-a2aa-c265502526aa-922199",
+   "language": "en",
+   "date": "2026-11-20T14:06:21Z",
+   "tag": [
+    "tender"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "20261120140616-104102",
+    "title": "Unit 6A and 6B Refurbishment - Trinity Market",
+    "description": "The Client is in the process of procuring a contractor for the refurbishment of one large unit into 2 smaller fully functioning catering units within Trinity Market, Hull, HU1 2JH, in accordance with relevant standards and specifications. This is to include creation of internal partition, builders works, installation of new sink and wash hand basins including hot and cold water and drainage, extension of gas supply and sub metering, alteration to existing electrical sockets, lighting and increasing power to the units to 3 phase.",
+    "datePublished": "2026-11-20T14:06:21Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "45000000",
+     "description": "Construction work"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "region": "Yorkshire and the Humber",
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure",
+    "tenderPeriod": {
+     "endDate": "2026-12-11T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2026-12-12T00:00:00Z",
+     "endDate": "2026-12-13T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": false
+    },
+    "mainProcurementCategory": "works",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/5ec94fa9-00b0-4308-a2aa-c265502526aa",
+      "datePublished": "2026-11-20T14:06:21Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "description": "Additional data",
+      "url": "https://uk.eu-supply.com/app/rfq/rwlentrance_s.asp?PID=111143&B=UK"
+     },
+     {
+      "id": "3",
+      "description": "User / Company",
+      "url": "https://uk.eu-supply.com/ctm/Company/CompanyInformation/Index/104102"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-188416",
+     "name": "Hull City Council",
+     "identifier": {
+      "legalName": "Hull City Council"
+     },
+     "address": {
+      "streetAddress": "The Guildhall, Alfred Gelder Street",
+      "locality": "Hull",
+      "postalCode": "HU1 2AA",
+      "countryName": "ENG"
+     },
+     "details": {
+      "url": "https://www.hull.gov.uk/"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-188416",
+    "name": "Hull City Council"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-fcdf5d16-dec9-462f-946a-8b0b79ea6927",
+   "id": "c2ab4601-e5c1-48d2-a816-27d0a4ffeca7-922168",
+   "language": "en",
+   "date": "2026-11-20T12:37:48Z",
+   "tag": [
+    "tender"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "bfcd6765-a852-4f82-8464-4fc97d59cee0",
+    "title": "CA18612 - Hopwood Hall College - Provision of Grounds Maintenance Services",
+    "description": "Hopwood Hall College is looking for a supplier for provision of Grounds Maintenance Services. For more information, please review tender documents. \r\n\r\nTo access this competition: \r\n\r\nRegistered:\r\nLogin to https://suppliers.multiquote.com and view the opportunity CA18612.\r\n\r\nNot registered:\r\nVisit https://suppliers.multiquote.com then register and quote CA18612 as the reason for registration. \r\n\r\n Any queries please contact MultiQuote on 020 3920 8054.",
+    "datePublished": "2026-11-20T12:37:48Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "77314000",
+     "description": "Grounds maintenance services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "M24 6XH"
+       },
+       {
+        "countryName": "British Oversea Territories"
+       },
+       {
+        "countryName": "Channel Islands"
+       },
+       {
+        "countryName": "Europe"
+       },
+       {
+        "countryName": "Isle of Man"
+       },
+       {
+        "countryName": "Rest of the World"
+       },
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 425000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure",
+    "tenderPeriod": {
+     "endDate": "2026-12-18T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-03-08T00:00:00Z",
+     "endDate": "2030-03-07T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": false
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/c2ab4601-e5c1-48d2-a816-27d0a4ffeca7",
+      "datePublished": "2026-11-20T12:37:48Z",
+      "format": "text/html",
+      "language": "en"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-82846",
+     "name": "Hopwood Hall College",
+     "identifier": {
+      "legalName": "Hopwood Hall College"
+     },
+     "address": {
+      "streetAddress": "Rochdale Campus, St Mary's Gate",
+      "locality": "Rochdale",
+      "postalCode": "M24 6XH",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://suppliers.multiquote.com"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-82846",
+    "name": "Hopwood Hall College"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-0e6b4c08-05b7-4094-bdd2-028fabb769b0",
+   "id": "6dc1388e-b51b-42a8-b7e8-2320c31e37e5-922047",
+   "language": "en",
+   "date": "2026-11-19T11:12:50Z",
+   "tag": [
+    "tender"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "a5945eea-cd5f-4c33-8f4f-04bfa1ff3dc7",
+    "title": "CA18707 - RFQ 2026/49 - NMANDD PEACEPLUS Thriving Together - Celebrating Cultures and Diversity - 3.5 Women's Festival",
+    "description": "Competent and creative suppliers are invited to tender for the design, development, and delivery of a two-stage Women's Festival. \r\nStage 1 will deliver pre-festival workshops and a cross-border learning visit to build the confidence, skills and independence of women from diverse backgrounds. Activities will focus on practical life skills, wellbeing, leadership and personal development, with opportunities to build networks and learn from inspiring women and community organisations. Stage 2 will culminate in an Inclusive Women's Festival around International Women's Day 2027, celebrating participants' achievements through taster sessions, demonstrations, information stands and talks. The festival will showcase learning outcomes while encouraging attendees to access support, explore new interests and connect with local groups.\r\n\r\n\r\nTo access this competition: \r\n\r\nRegistered:\r\nLogin to https://suppliers.multiquote.com and view the opportunity CA18707.\r\n\r\nNot registered:\r\nVisit https://suppliers.multiquote.com then register and quote CA18707 as the reason for registration. \r\n\r\n Any queries please contact MultiQuote on 020 3920 8054.",
+    "datePublished": "2026-11-19T11:12:50Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "92000000",
+     "description": "Recreational, cultural and sporting services"
+    },
+    "additionalClassifications": [
+     {
+      "scheme": "CPV",
+      "id": "98000000",
+      "description": "Other community, social and personal services"
+     },
+     {
+      "scheme": "CPV",
+      "id": "80000000",
+      "description": "Education and training services"
+     }
+    ],
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "BT34 2QU"
+       },
+       {
+        "countryName": "British Oversea Territories"
+       },
+       {
+        "countryName": "Channel Islands"
+       },
+       {
+        "countryName": "Europe"
+       },
+       {
+        "countryName": "Isle of Man"
+       },
+       {
+        "countryName": "Rest of the World"
+       },
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 19545.4,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure",
+    "tenderPeriod": {
+     "endDate": "2026-12-17T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-01-04T00:00:00Z",
+     "endDate": "2027-03-31T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": false
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/6dc1388e-b51b-42a8-b7e8-2320c31e37e5",
+      "datePublished": "2026-11-19T11:12:50Z",
+      "format": "text/html",
+      "language": "en"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-333373",
+     "name": "Newry, Mourne and Down District Council (NMD)",
+     "identifier": {
+      "legalName": "Newry, Mourne and Down District Council (NMD)"
+     },
+     "address": {
+      "streetAddress": "Unit 19 Rampart Road, Greenbank Industrial Estate",
+      "locality": "Newry",
+      "postalCode": "BT34 2QU",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://suppliers.multiquote.com"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-333373",
+    "name": "Newry, Mourne and Down District Council (NMD)"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-2ab4f91b-5dd4-48b4-b763-a83313964827",
+   "id": "9989a74e-e23d-4ffd-9ee2-85f92134ec71-922018",
+   "language": "en",
+   "date": "2026-11-19T09:46:49Z",
+   "tag": [
+    "tenderAmendment"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "RA361454",
+    "title": "RA361454 - REPAIR TO ICT COMPUTER ROOMS",
+    "description": "To carry out a full service on all air conditioning equipment to include the\r\nfollowing:\r\n\r\nFilters\r\nFan motors\r\nCompressors \r\nCondensate pumps and lines\r\nElectrical checks\r\nOperation of refrigerant circuits\r\nUpdating of all logs\r\nF Gas certification for every unit\r\n\r\n - To access this competition: login to https://suppliers.multiquote.com and view the opportunity RA361454. Not registered on MultiQuote - visit https://suppliers.multiquote.com then register and quote RA361454 as the reason for registration. Any queries please contact MultiQuote on 0151 482 9230.",
+    "datePublished": "2026-11-18T15:30:50Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "50000000",
+     "description": "Repair and maintenance services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "NP4 0YP"
+       },
+       {
+        "countryName": "British Oversea Territories"
+       },
+       {
+        "countryName": "Channel Islands"
+       },
+       {
+        "countryName": "Europe"
+       },
+       {
+        "countryName": "Isle of Man"
+       },
+       {
+        "countryName": "Rest of the World"
+       },
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure",
+    "tenderPeriod": {
+     "endDate": "2026-11-23T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2026-11-24T12:00:00Z",
+     "endDate": "2026-11-24T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": false
+    },
+    "mainProcurementCategory": "goods",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/9989a74e-e23d-4ffd-9ee2-85f92134ec71",
+      "datePublished": "2026-11-18T15:30:50Z",
+      "dateModified": "2026-11-19T09:46:49Z",
+      "format": "text/html",
+      "language": "en"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-74548",
+     "name": "Aneurin Bevan Health Board",
+     "identifier": {
+      "legalName": "Aneurin Bevan Health Board"
+     },
+     "address": {
+      "streetAddress": "C Block, 2nd Floor",
+      "locality": "Pontypool",
+      "postalCode": "NP4 0YP",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://suppliers.multiquote.com"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-74548",
+    "name": "Aneurin Bevan Health Board"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-134db43f-82b9-44e1-a036-a2de282ed1e3",
+   "id": "737a8992-6db8-4968-8ee2-36df429cce70-922001",
+   "language": "en",
+   "date": "2026-11-19T08:19:14Z",
+   "tag": [
+    "tenderAmendment"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "WWF/CF27/003",
+    "title": "ALIGN Latin America Policy Scan",
+    "description": "Dear Supplier,\r\n\r\nWWF-UK is seeking a supplier to deliver the services outlined in the attached Tender Specification.\r\n\r\nPlease review the Tender Specification and contact WWF-UK if you would like to submit a proposal. Submissions are made entirely through our procurement platform, Coupa. Depending on the tender requirements, you may be asked to provide forms, attachments, pricing information, and/or details about your products or services.\r\n\r\nPlease express your interest in submitting a proposal by 26th November 2026. After this date you will receive tender invite from WWF procurement platform, Coupa.\r\n\r\nIf you have any questions regarding the tender, please contact Mei Casal at MCasal@wwf.org.uk or Thomas Addoah at TAddoah@wwf.org.uk\r\n\r\nBest regards,\r\nWWF-UK Procurement Team",
+    "datePublished": "2026-11-17T11:34:16Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "73110000",
+     "description": "Research services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "procurementMethod": "limited",
+    "procurementMethodDetails": "Competitive quotation (below threshold)",
+    "tenderPeriod": {
+     "endDate": "2026-11-26T23:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-01-04T00:00:00Z",
+     "endDate": "2027-04-05T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": true
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/737a8992-6db8-4968-8ee2-36df429cce70",
+      "datePublished": "2026-11-17T11:34:16Z",
+      "dateModified": "2026-11-19T08:19:14Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "biddingDocuments",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/939949d0-a5cd-4165-9c1a-602dff2c70be",
+      "format": "application/pdf"
+     },
+     {
+      "id": "3",
+      "documentType": "biddingDocuments",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/acb82b02-6cfe-4ed5-b11a-cfa24fac6ef5",
+      "format": "application/pdf"
+     },
+     {
+      "id": "4",
+      "documentType": "contractDraft",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/757edb68-744e-442f-8eaa-05ac3356a1a0",
+      "format": "application/pdf"
+     },
+     {
+      "id": "5",
+      "documentType": "biddingDocuments",
+      "url": "https://www.wwf.org.uk/about/suppliers"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/q2dD4MSC",
+     "name": "WWF-UK (WORLD WIDE FUND FOR NATURE) TRADING LIMITED",
+     "identifier": {
+      "legalName": "WWF-UK (WORLD WIDE FUND FOR NATURE) TRADING LIMITED",
+      "scheme": "GB-SRS",
+      "id": "sid4gov.cabinetoffice.gov.uk/q2dD4MSC"
+     },
+     "address": {
+      "streetAddress": "Rufford House",
+      "locality": "WOKING",
+      "postalCode": "GU214LL",
+      "countryName": "England"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/q2dD4MSC",
+    "name": "WWF-UK (WORLD WIDE FUND FOR NATURE) TRADING LIMITED"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-f6eaec71-f5dc-4128-a89a-43884330862e",
+   "id": "2b1ad77a-fe69-41ec-bb65-52eb8d48ae46-921990",
+   "language": "en",
+   "date": "2026-11-18T17:45:03Z",
+   "tag": [
+    "tender"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "MT238566",
+    "title": "Runswick Bay Public wifi design and install",
+    "description": "To deliver a reliable, free and easy-to-use public Wi-Fi network for Runswick Bay that improves the visitor experience and overall connectivity, provides useful visitor data, while respecting the character of the village and the special qualities of the National Park.\r\nThe following outputs are mandatory requirements for this brief:\r\n1: A fully installed and operational network by June 2027.\r\n2: Free, legally compliant access (Digital Economy Act 2010, content filtering, UK GDPR).\r\n3: Remote monitoring, maintenance and support for the three-year term.\r\n4: Visitor analytics reporting.\r\nThe contract will run for three years from the date the network is fully installed and operational.",
+    "datePublished": "2026-11-18T17:45:03Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "72212200",
+     "description": "Networking, Internet and intranet software development services"
+    },
+    "additionalClassifications": [
+     {
+      "scheme": "CPV",
+      "id": "32412110",
+      "description": "Internet network"
+     },
+     {
+      "scheme": "CPV",
+      "id": "48200000",
+      "description": "Networking, Internet and intranet software package"
+     },
+     {
+      "scheme": "CPV",
+      "id": "48221000",
+      "description": "Internet browsing software package"
+     },
+     {
+      "scheme": "CPV",
+      "id": "72411000",
+      "description": "Internet service providers ISP"
+     }
+    ],
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "region": "Yorkshire and the Humber",
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 20000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure (below threshold)",
+    "tenderPeriod": {
+     "endDate": "2026-12-01T17:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-01-01T00:00:00Z",
+     "endDate": "2030-06-30T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": false
+    },
+    "mainProcurementCategory": "goods",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/2b1ad77a-fe69-41ec-bb65-52eb8d48ae46",
+      "datePublished": "2026-11-18T17:45:03Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "tenderNotice",
+      "description": "NOTE: To register your interest in this notice and obtain any additional information please visit the myTenders Web Site at the link provided.",
+      "url": "https://www.mytenders.co.uk/search/show/search_view.aspx?ID=NOV172131"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-58603",
+     "name": "North York Moors National Park Authority",
+     "identifier": {
+      "legalName": "North York Moors National Park Authority"
+     },
+     "address": {
+      "streetAddress": "The Old Vicarage, Bondgate",
+      "locality": "Helmsley",
+      "postalCode": "YO62 5BP",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://www.northyorkmoors.org.uk"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-58603",
+    "name": "North York Moors National Park Authority"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-0f6c3841-68b9-4063-849d-9112d3ee3f2a",
+   "id": "612ec727-9bb1-4e65-99f4-1c68f8c05873-921970",
+   "language": "en",
+   "date": "2026-11-18T15:52:20Z",
+   "tag": [
+    "tenderAmendment"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "EEEF's Digital Public Service and support the incubation of an agile product culture",
+    "title": "Embedded product team to develop the Alpha and Beta of the EEF's Digital Public Service and support the incubation of an agile product culture",
+    "description": "Our ambition is to build a Digital Public Service to support teachers and leaders to combine research with professional judgement to make decisions that improve outcomes in their settings, particularly for socio-economically disadvantaged children and young people.\r\n\r\nThis commission is much more than a technology refresh. It is the first critical step in a wider transformation of our technology, engagement model and ways of working. It should deliver two things:\r\n\r\nA working, user-centered digital product that helps educators find, understand and apply evidence when they need it.\r\n\r\nThe capabilities and product culture to deliver an effective service that the EEF can own, sustain and improve.\r\n\r\nAdditional information: Embedded product team to develop the Alpha and Beta of the EEF's Digital Public Service and support the incubation of an agile product culture",
+    "datePublished": "2026-10-30T15:11:59Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "72200000",
+     "description": "Software programming and consultancy services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "SW1P 4QP"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 730000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure (above threshold)",
+    "tenderPeriod": {
+     "endDate": "2026-11-30T17:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-01-01T00:00:00Z",
+     "endDate": "2027-11-01T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": true
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/612ec727-9bb1-4e65-99f4-1c68f8c05873",
+      "datePublished": "2026-10-30T15:11:59Z",
+      "dateModified": "2026-11-18T15:52:20Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "tenderNotice",
+      "description": "The EEF is seeking proposals from an embedded product team to develop the Alpha and Beta of our Digital Public Service, and to help us incubate an agile product culture.",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/decfbba3-926b-47db-9206-df09f6b54830",
+      "format": "application/pdf"
+     },
+     {
+      "id": "5",
+      "documentType": "clarifications",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/a42804e3-9dc9-45db-9bcb-1a6a33faf65b",
+      "format": "application/pdf"
+     },
+     {
+      "id": "4",
+      "documentType": "biddingDocuments",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/tenders/digital-public-service-oct-2026"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/rhvG75Vh",
+     "name": "THE EDUCATION ENDOWMENT FOUNDATION",
+     "identifier": {
+      "legalName": "THE EDUCATION ENDOWMENT FOUNDATION",
+      "scheme": "GB-SRS",
+      "id": "sid4gov.cabinetoffice.gov.uk/rhvG75Vh"
+     },
+     "address": {
+      "streetAddress": "5th Floor,Millbank Tower, 21-24 Millbank",
+      "locality": "LONDON",
+      "postalCode": "SW1P4QP",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/tenders/digital-public-service-oct-2026"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/rhvG75Vh",
+    "name": "THE EDUCATION ENDOWMENT FOUNDATION"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-b6d90335-bd98-42fb-a8f1-1883ce3dab2d",
+   "id": "60b0ef0e-dc74-4612-9a82-27bd435143ce-922215",
+   "language": "en",
+   "date": "2026-11-20T14:58:10Z",
+   "tag": [
+    "tenderAmendment"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "Thet 2026 05",
+    "title": "Building Services Engineer (Mechanical & Electrical)",
+    "description": "Thetford Town Council wishes to appoint an experienced Building Services Engineer with demonstrable experience in historic buildings and heritage environments.\r\n\r\nThe successful consultant will assist in developing a coordinated mechanical and electrical services strategy capable of supporting the future use of the building whilst minimising impacts upon historic fabric and significance.\r\n\r\nThe consultant will provide specialist advice throughout the Development Phase and contribute technical information required for the NLHF Delivery Phase Application.\r\n\r\nAll submissions should sent to Susan Moore - susanmoore@thetfordtowncouncil.gov.uk",
+    "datePublished": "2026-11-06T09:09:15Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "71315210",
+     "description": "Building services consultancy services"
+    },
+    "additionalClassifications": [
+     {
+      "scheme": "CPV",
+      "id": "71334000",
+      "description": "Mechanical and electrical engineering services"
+     }
+    ],
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "IP24 2DS"
+       }
+      ]
+     }
+    ],
+    "minValue": {
+     "amount": 12000,
+     "currency": "GBP"
+    },
+    "value": {
+     "amount": 15000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure (below threshold)",
+    "tenderPeriod": {
+     "endDate": "2026-11-30T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2026-12-14T00:00:00Z",
+     "endDate": "2027-11-14T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": true
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/60b0ef0e-dc74-4612-9a82-27bd435143ce",
+      "datePublished": "2026-11-06T09:09:15Z",
+      "dateModified": "2026-11-20T14:58:10Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "tenderNotice",
+      "description": "Contract Brief",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/49648b81-007a-49aa-88d2-a2d89aec6fef",
+      "format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+     },
+     {
+      "id": "4",
+      "documentType": "clarifications",
+      "description": "RIBA Stage 2 report",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/fd14256d-cbaa-47ef-87e9-600d21067f4f",
+      "format": "application/pdf"
+     },
+     {
+      "id": "5",
+      "documentType": "clarifications",
+      "description": "Condition Survey",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/66b1de11-0102-4c66-9eb5-313968f50f12",
+      "format": "application/pdf"
+     },
+     {
+      "id": "6",
+      "documentType": "clarifications",
+      "description": "Updated 20.11.2026",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/930d84fc-81a9-43a0-a748-64b818adc052",
+      "format": "application/pdf"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/RWjp86Z4",
+     "name": "Thetford Town Council",
+     "identifier": {
+      "legalName": "Thetford Town Council",
+      "scheme": "GB-SRS",
+      "id": "sid4gov.cabinetoffice.gov.uk/RWjp86Z4"
+     },
+     "address": {
+      "streetAddress": "The Carnegie, Cage Lane",
+      "locality": "THETFORD",
+      "postalCode": "IP242DS",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://www.thetfordtowncouncil.gov.uk/"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/RWjp86Z4",
+    "name": "Thetford Town Council"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-dd30c6d6-05ea-46d8-b7c3-8055491ee131",
+   "id": "f075e29c-9077-44f9-82a0-364f1c9faf35-922214",
+   "language": "en",
+   "date": "2026-11-20T14:55:05Z",
+   "tag": [
+    "tenderAmendment"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "Thet 2026 06",
+    "title": "Structural Engineer",
+    "description": "Thetford Town Council wishes to appoint a Structural Engineer with demonstrable experience in historic buildings, conservation projects and traditional construction.\r\n\r\nThe successful consultant will assess the structural condition of the building, develop repair recommendations, contribute to design development and support the wider consultant team in delivering a viable and fundable project.\r\n\r\nThe Structural Engineer will provide technical support throughout the Development Phase and assist in the preparation of documentation required for planning, listed building consent, cost planning and future funding submissions.\r\n\r\nAll Submissions should sent to Susan Moore - susanmoore@thetfordtowncouncil.gov.uk",
+    "datePublished": "2026-11-06T09:20:40Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "71312000",
+     "description": "Structural engineering consultancy services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "IP24 2DS"
+       }
+      ]
+     }
+    ],
+    "minValue": {
+     "amount": 12000,
+     "currency": "GBP"
+    },
+    "value": {
+     "amount": 15000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure (below threshold)",
+    "tenderPeriod": {
+     "endDate": "2026-11-30T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2026-12-14T00:00:00Z",
+     "endDate": "2027-11-14T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": true
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/f075e29c-9077-44f9-82a0-364f1c9faf35",
+      "datePublished": "2026-11-06T09:20:40Z",
+      "dateModified": "2026-11-20T14:55:05Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "tenderNotice",
+      "description": "Contract Brief",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/1dd73016-6de3-4778-8616-f3fd4ba1cf46",
+      "format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+     },
+     {
+      "id": "3",
+      "documentType": "clarifications",
+      "description": "RIBA Stage 2 Report",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/fd209345-d9f8-4123-a9f0-a63fe3f08bcb",
+      "format": "application/pdf"
+     },
+     {
+      "id": "4",
+      "documentType": "clarifications",
+      "description": "Condition Survey",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/13fe692c-12be-4a76-b9a9-4e91885c5c36",
+      "format": "application/pdf"
+     },
+     {
+      "id": "5",
+      "documentType": "clarifications",
+      "description": "Updated 20.11.2026",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/6c79d7be-e69f-4a6c-b4df-4c81b0bbcd0f",
+      "format": "application/pdf"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/RWjp86Z4",
+     "name": "Thetford Town Council",
+     "identifier": {
+      "legalName": "Thetford Town Council",
+      "scheme": "GB-SRS",
+      "id": "sid4gov.cabinetoffice.gov.uk/RWjp86Z4"
+     },
+     "address": {
+      "streetAddress": "The Carnegie, Cage Lane",
+      "locality": "THETFORD",
+      "postalCode": "IP242DS",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://www.thetfordtowncouncil.gov.uk/"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/RWjp86Z4",
+    "name": "Thetford Town Council"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-1d2960a8-fbd7-432a-b98d-6efe29cf98d6",
+   "id": "a480e6c4-c6d2-44ff-8d3f-60d13573b1dd-922213",
+   "language": "en",
+   "date": "2026-11-20T14:52:52Z",
+   "tag": [
+    "tenderAmendment"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "Thet 2026 08",
+    "title": "Archaeological Consultant",
+    "description": "Thetford Town Council wishes to appoint a suitably qualified and experienced Archaeological Consultant to provide archaeological advice throughout the Development Phase.\r\nThe consultant shall:\r\n\u2022\tIdentify archaeological opportunities and constraints.\r\n\u2022\tAdvise on impacts to archaeological remains and burials.\r\n\u2022\tAssist the project team in developing proposals which respect and enhance heritage significance.\r\n\u2022\tAdvise on archaeological investigations required to support future development.\r\n\u2022\tSupport the National Lottery Heritage Fund Delivery Phase application.\r\n\r\nAll submissions to be sent to Susan Moore susanmoore@thetfordtowncouncil.gov.uk",
+    "datePublished": "2026-11-11T16:03:40Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "71351914",
+     "description": "Archaeological services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "postalCode": "IP24 2DS"
+       }
+      ]
+     }
+    ],
+    "minValue": {
+     "amount": 5000,
+     "currency": "GBP"
+    },
+    "value": {
+     "amount": 8000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure (below threshold)",
+    "tenderPeriod": {
+     "endDate": "2026-12-11T12:00:00Z"
+    },
+    "contractPeriod": {
+     "startDate": "2027-01-14T00:00:00Z",
+     "endDate": "2027-12-14T23:59:59Z"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": true
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/a480e6c4-c6d2-44ff-8d3f-60d13573b1dd",
+      "datePublished": "2026-11-11T16:03:40Z",
+      "dateModified": "2026-11-20T14:52:52Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "tenderNotice",
+      "description": "Contract brief",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/0fed5092-44cc-412c-8efa-7b1a66e39372",
+      "format": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+     },
+     {
+      "id": "3",
+      "documentType": "clarifications",
+      "description": "RIBA Stage 2 Report",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/0ea55344-724c-46e1-bf45-46d0f3789ed8",
+      "format": "application/pdf"
+     },
+     {
+      "id": "4",
+      "documentType": "clarifications",
+      "description": "Condition Survey",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/d40b9b73-646a-4e1b-a74b-d1239da43ead",
+      "format": "application/pdf"
+     },
+     {
+      "id": "5",
+      "documentType": "clarifications",
+      "description": "Updated 20.11.2026",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/Attachment/bf67cee2-41e8-4d01-ba5d-0093dd17aa47",
+      "format": "application/pdf"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/RWjp86Z4",
+     "name": "Thetford Town Council",
+     "identifier": {
+      "legalName": "Thetford Town Council",
+      "scheme": "GB-SRS",
+      "id": "sid4gov.cabinetoffice.gov.uk/RWjp86Z4"
+     },
+     "address": {
+      "streetAddress": "2 Cage Lane",
+      "locality": "THETFORD",
+      "postalCode": "IP242DS",
+      "countryName": "England"
+     },
+     "details": {
+      "url": "https://www.thetfordtowncouncil.gov.uk/"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-SRS-sid4gov.cabinetoffice.gov.uk/RWjp86Z4",
+    "name": "Thetford Town Council"
+   }
+  },
+  {
+   "ocid": "ocds-b5fd17-f162f995-b86a-4237-b94d-14d9bd2ba74b",
+   "id": "211e152e-f0ae-42b6-9c45-e542c481feae-922210",
+   "language": "en",
+   "date": "2026-11-20T14:50:02Z",
+   "tag": [
+    "tender"
+   ],
+   "initiationType": "tender",
+   "tender": {
+    "id": "BIP1087624197",
+    "title": "MOPAC Children and Young People Victim Service (MOPAC 969)",
+    "description": "Modification Notice\r\n      Original description: Specialist support service for children and young victims of crime.\r\n      Description of the modifications\r\n      To expand capacity and meet demand.\r\n      Description of the economic or technical reasons and the inconvenience or duplication of cost preventing a change of contractor:\r\n      Additional funding has allowed MOPAC to increase support for priority victim and Violence Against Women and Girls (VAWG) services, including YLVS to help expand its capacity and continue meeting demand within its existing service offer.",
+    "datePublished": "2026-11-20T14:50:02Z",
+    "status": "active",
+    "classification": {
+     "scheme": "CPV",
+     "id": "85000000",
+     "description": "Health and social work services"
+    },
+    "items": [
+     {
+      "id": "1",
+      "deliveryAddresses": [
+       {
+        "region": "London",
+        "countryName": "United Kingdom"
+       }
+      ]
+     }
+    ],
+    "value": {
+     "amount": 5500000,
+     "currency": "GBP"
+    },
+    "procurementMethod": "open",
+    "procurementMethodDetails": "Open procedure",
+    "tenderPeriod": {
+     "endDate": "2024-05-03T00:00:00+01:00"
+    },
+    "contractPeriod": {
+     "startDate": "2024-10-01T00:00:00+01:00",
+     "endDate": "2028-03-31T23:59:59+01:00"
+    },
+    "suitability": {
+     "sme": true,
+     "vcse": true
+    },
+    "mainProcurementCategory": "services",
+    "documents": [
+     {
+      "id": "1",
+      "documentType": "tenderNotice",
+      "description": "Opportunity notice on Contracts Finder",
+      "url": "https://www.contractsfinder.service.gov.uk/Notice/211e152e-f0ae-42b6-9c45-e542c481feae",
+      "datePublished": "2026-11-20T14:50:02Z",
+      "format": "text/html",
+      "language": "en"
+     },
+     {
+      "id": "2",
+      "documentType": "tenderNotice",
+      "description": "Please follow this link to view the notice.",
+      "url": "https://www.delta-esourcing.com/delta/respondToList.html?noticeId=1087624197"
+     }
+    ]
+   },
+   "parties": [
+    {
+     "id": "GB-CFS-316218",
+     "name": "The Mayor's Office for Policing and Crime",
+     "identifier": {
+      "legalName": "The Mayor's Office for Policing and Crime"
+     },
+     "address": {
+      "streetAddress": "169 Union Street",
+      "locality": "London",
+      "postalCode": "SE1 0LL",
+      "countryName": "UK"
+     },
+     "roles": [
+      "buyer"
+     ]
+    }
+   ],
+   "buyer": {
+    "id": "GB-CFS-316218",
+    "name": "The Mayor's Office for Policing and Crime"
+   }
+  }
+ ],
+ "links": {}
+}
