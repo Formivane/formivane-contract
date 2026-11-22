@@ -9,8 +9,6 @@
     "deny": [
       "Read(./.env)",
       "Bash(curl:*)",
-      "Bash(rm:*)",
-      "Bash(git push:*)",
       "Bash(sqlite3:*)"
     ]
   }

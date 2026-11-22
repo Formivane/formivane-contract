@@ -84,7 +84,7 @@ The machine must be on. The AI jobs call `claude -p "/fic-daily"` headless, whic
 
 - Never submits tenders, emails anyone, signs, buys or changes payment details. Proposals are drafts; approval just marks them ready.
 - Dashboard binds to 127.0.0.1; POSTs require an `X-FIC` header (blocks cross-site form posts).
-- `.claude/settings.json` allows agents only `python -m fic ...`; denies reading `.env`, `curl`, `rm`, `sqlite3`, `git push`.
+- `.claude/settings.json` allows agents only `python -m fic ...`; denies reading `.env`, `curl` and `sqlite3` (agents must go through `fic`). Headless runs only get the tools passed in `--allowedTools`.
 - No credentials needed. `.env` is gitignored if you add one.
 - Named contact details in notices are not stored.
 
