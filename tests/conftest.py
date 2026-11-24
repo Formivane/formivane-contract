@@ -18,6 +18,9 @@ def cfg(tmp_path, monkeypatch):
     c["db_path"] = str(tmp_path / "test.db")
     c["profile"] = {"company_name": "Test", "accreditations": {}, "finance": {}, "delivery": {"day_rate_gbp": 400}}
     c["collection"]["request_delay_seconds"] = 0
+    # Pin the value bands these tests were written against; the live window is tested separately.
+    c["relevance"].update(value_min=0, value_max=10**12)
+    c["scoring"].update(sweet_spot_min=5000, sweet_spot_max=150000)
     return c
 
 

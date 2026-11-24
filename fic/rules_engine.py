@@ -248,6 +248,9 @@ def score(opp, cfg, profile, rules=(), elig=None, econ=None, buyer_awards=0, tod
         gated, total = "eligibility gate: hard requirement not met", min(total, 15)
     elif dl is not None and dl < 0:
         gated, total = "deadline passed", 0
+    rc = cfg["relevance"]
+    if v and not (rc.get("value_min", 0) <= v <= rc.get("value_max", float("inf"))):
+        gated, total = f"value £{v:,.0f} outside £{rc.get('value_min', 0):,.0f}-£{rc.get('value_max', 0):,.0f} window", min(total, 20)
     return {"score": round(total, 1), "uncertainty": round(spread, 1), "gate": gated,
             "criteria": {k: {"value": round(c[k][0], 3), "weight": round(w[k], 3), "confidence": c[k][1], "why": c[k][2]} for k in w}}
 

@@ -17,6 +17,9 @@ collect_awards = true
 
 [relevance]
 min_score = 3.0             # below this an opportunity is stored but not queued
+# Hard value window (GBP). Known values outside it are gated out; unpublished values pass through.
+value_min = 300
+value_max = 15000
 # CPV prefixes that indicate digital work (prefix match).
 cpv_include = ["72", "48", "79342200", "79822500", "79800000", "73220000", "79310000"]
 title_weight = 2.0
@@ -47,8 +50,8 @@ strong_threshold = 65
 possible_threshold = 45
 investigate_threshold = 50   # score at/above which 'requires verification' becomes 'Requires investigation'
 min_days_to_deadline = 5     # fewer days than this -> heavily penalised
-sweet_spot_min = 5000        # GBP advertised value sweet spot for a small agency
-sweet_spot_max = 150000
+sweet_spot_min = 2000        # GBP advertised value sweet spot for a small agency
+sweet_spot_max = 15000 
 max_realistic_value = 500000 # above this, a small agency is unlikely to win as prime
 ceiling_value_flag = 1000000 # treat as framework/ceiling, not guaranteed spend
 

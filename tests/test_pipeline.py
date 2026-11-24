@@ -129,3 +129,17 @@ def test_collection_failure_keeps_partial_and_holds_watermark(cfg, con, monkeypa
 
 def test_normalise_strips_reference_codes_in_fingerprint():
     assert normalise.fingerprint("RA361520 - Website build", "X Council") == normalise.fingerprint("RA999 - Website build", "X Council")
+
+
+def test_value_window_gates_out_of_range(cfg):
+    cfg["relevance"].update(value_min=300, value_max=15000)
+    base = {"title": "Website redesign and WordPress development", "description": "website development", "cpv": "72000000",
+            "deadline": "2099-01-01T12:00:00Z"}
+    profile = cfg["profile"]
+    inside = rules_engine.classify(dict(base, value_amount=8000), cfg, profile)
+    over = rules_engine.classify(dict(base, value_amount=40000), cfg, profile)
+    under = rules_engine.classify(dict(base, value_amount=100), cfg, profile)
+    unknown = rules_engine.classify(dict(base, value_amount=None), cfg, profile)
+    assert inside["score"]["gate"] is None and unknown["score"]["gate"] is None
+    assert "outside" in over["score"]["gate"] and "outside" in under["score"]["gate"]
+    assert over["classification"] == "Unlikely to be suitable"
